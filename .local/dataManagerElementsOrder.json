@@ -12,9 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "candidates&Sequence_33",
-        "dtCandidateSummary&StateMachine_1",
-        "str_CanditateSummaryExcel&Sequence_25",
+        "str_ProcessWorkflowPath&Sequence_25",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -48,8 +46,11 @@
     {
       "Path": "Framework/GetTransactionData.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "str_ExcelCandidatePath&Sequence_9"
+      ],
       "ArgumentsSectionElementsOrder": [
+        "dt_CandidateSummary",
         "in_TransactionNumber",
         "in_Config",
         "out_TransactionItem",
@@ -64,7 +65,9 @@
     {
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "str_ExcelCandidatePath&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
         "in_TransactionItem",
         "in_Config"
@@ -120,6 +123,59 @@
       "ArgumentsSectionElementsOrder": [
         "in_Folder",
         "io_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "dtCandidateSummary&StateMachine_1",
+        "ShouldStop&Sequence_25",
+        "str_CanditateSummaryExcel&Sequence_25",
+        "candidates&Sequence_33"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Workflow.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "candidates&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dt_CandidateSummary",
+        "str_ExcelCandidatePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/TransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "candidates&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "str_ExcelCandidatePath",
+        "dt_CandidateSummary"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
