@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1523.3333333333333,1742.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>683.3333333333334,1868</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetEmailDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -109,21 +109,28 @@
       <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetEmailDetails" sap:VirtualizedContainerService.HintSize="648.6666666666666,1678" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetEmailDetails" sap:VirtualizedContainerService.HintSize="672.6666666666666,1803.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_Sender" />
+      <Variable x:TypeArguments="x:String" Default="Inbox" Name="str_MailFolder" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="586.6666666666666,1567.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
-      <TryCatch.Variables>
-        <Variable x:TypeArguments="x:String" Default="bellian.work.otieno24@gmail.com" Name="str_Email_Recepient" />
-      </TryCatch.Variables>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="610.6666666666666,1692.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="548,1304.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap:VirtualizedContainerService.HintSize="572,1430" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <Sequence.Variables>
             <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="RelevantMails" />
-            <Variable x:TypeArguments="x:String" Default="Inbox" Name="str_MailFolder" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -131,21 +138,29 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:GetOutlookMailMessages Account="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages In inbox" Filter="[Subject] = 'New Recruit Candidate Details'" GetAttachements="False" sap:VirtualizedContainerService.HintSize="486,25.333333333333332" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="[str_MailFolder]" MarkAsRead="False" Messages="[RelevantMails]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Top="30" />
-          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="486,1128.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[RelevantMails]">
+          <ui:GetOutlookMailMessages Account="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages In inbox" Filter="[Subject] = 'New Recruit Candidate Details'" GetAttachements="False" sap:VirtualizedContainerService.HintSize="510,25.333333333333332" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="[in_config(&quot;MailFolder&quot;).ToString]" MarkAsRead="False" Messages="[RelevantMails]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Top="30" />
+          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="510,1254" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[RelevantMails]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="snm:MailMessage">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentItem" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,938.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1064" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MoveOutlookMessage Account="{x:Null}" DisplayName="Move Outlook Mail Message" sap:VirtualizedContainerService.HintSize="410,88" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_1" MailFolder="automations" MailMessage="[currentItem]" />
-                  <If Condition="[currentItem.Attachments.Count &gt;0]" sap:VirtualizedContainerService.HintSize="410,723.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[str_Sender]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[currentItem.Sender.ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:MoveOutlookMessage Account="{x:Null}" DisplayName="Move Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_1" MailFolder="automations" MailMessage="[currentItem]" />
+                  <If Condition="[currentItem.Attachments.Count &gt;0]" sap:VirtualizedContainerService.HintSize="434,723.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="376,175.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
                         <Sequence.Variables>
@@ -175,11 +190,17 @@
                 </Sequence>
               </ActivityAction>
             </ui:ForEach.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
           </ui:ForEach>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="552.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="576.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -190,14 +211,14 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
             </ActivityAction.Argument>
-            <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[in_config(&quot;Business_Exception_Email_Body&quot;).ToString]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="High" IsBodyHtml="False" IsDraft="False" ReplyTo="bellian.work.otieno24@gmail.com" Sensitivity="Normal" Subject="[in_config(&quot;Business_Exception_Email_Subject &quot;).ToString]" To="[str_Email_Recepient]">
+            <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[in_config(&quot;BException_Email_Body&quot;).ToString]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="High" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_config(&quot;BException_Email_Subject &quot;).ToString]" To="[str_Sender]">
               <ui:SendOutlookMail.Files>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
               </ui:SendOutlookMail.Files>
             </ui:SendOutlookMail>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="552.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="576.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -208,23 +229,44 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="450,489.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence sap:VirtualizedContainerService.HintSize="496,614.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="str_FolderPath">
+                  <Variable.Default>
+                    <Literal x:TypeArguments="x:String">Data\Exceptions</Literal>
+                  </Variable.Default>
+                </Variable>
+                <Variable x:TypeArguments="x:String" Name="str_FilePath" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\TakeScreenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+              <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[str_FolderPath]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Data\Exceptions</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\TakeScreenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  <InArgument x:TypeArguments="x:String" x:Key="in_Folder">
+                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_FolderPath" />
+                  </InArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">
+                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_FilePath" />
+                  </InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[in_config(&quot;System_Exception_Email_Body&quot;).ToString]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="High" IsBodyHtml="False" IsDraft="False" ReplyTo="bellian.work.otieno24@gmail.com" Sensitivity="Normal" Subject="[in_config(&quot;System_Exception_Email_Subject &quot;).ToString]" To="[str_Email_Recepient]">
+              <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[in_config(&quot;SException_Email_Body&quot;).ToString]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="High" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_config(&quot;SException_Email_Subject &quot;).ToString]" To="[str_Sender]">
                 <ui:SendOutlookMail.Files>
                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                 </ui:SendOutlookMail.Files>
               </ui:SendOutlookMail>
-              <Rethrow sap:VirtualizedContainerService.HintSize="388,25.333333333333332" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+              <Rethrow sap:VirtualizedContainerService.HintSize="434,25.333333333333332" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
             </Sequence>
           </ActivityAction>
         </Catch>

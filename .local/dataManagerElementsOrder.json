@@ -51,9 +51,44 @@
     {
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "OutlookAccount&Sequence_17",
+        "RelevantMails&Sequence_17"
+      ],
       "ArgumentsSectionElementsOrder": [
         "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Emails/GetEmailDetails.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_MailFolder&Sequence_1",
+        "str_Sender&Sequence_1",
+        "str_FilePath&Sequence_6",
+        "str_FolderPath&Sequence_6",
+        "RelevantMails&Sequence_5",
+        "DocumentsFolder&Sequence_2",
+        "CandidateList&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/TakeScreenshot.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Screenshot&Sequence_1",
+        "ScreenshotFileInfo&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Folder",
+        "io_FilePath"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
