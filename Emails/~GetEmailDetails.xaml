@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1523.3333333333333,600.6666666666666</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1523.3333333333333,3135.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetEmailDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -116,9 +116,10 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetEmailDetails" sap:VirtualizedContainerService.HintSize="496,536" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetEmailDetails" sap:VirtualizedContainerService.HintSize="816.6666666666666,3070.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_Sender" />
       <Variable x:TypeArguments="x:String" Default="Inbox" Name="str_MailFolder" />
@@ -129,7 +130,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,425.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="754.6666666666666,2960" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -137,7 +138,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="716,2946" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap:VirtualizedContainerService.HintSize="716,2697.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <Sequence.Variables>
             <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="RelevantMails" />
           </Sequence.Variables>
@@ -148,13 +149,13 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:GetOutlookMailMessages Account="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages In inbox" Filter="[Subject] = 'New Recruit Candidate Details'" GetAttachements="False" sap:VirtualizedContainerService.HintSize="654,25.333333333333332" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="[str_MailFolder]" MarkAsRead="False" Messages="[RelevantMails]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Top="30" />
-          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="654,2770" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[RelevantMails]">
+          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="654,2521.3333333333335" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[RelevantMails]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="snm:MailMessage">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentItem" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="620,2580" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="620,2331.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -168,13 +169,13 @@
                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New Dictionary(of String, Object)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each configuration sheet" sap:VirtualizedContainerService.HintSize="578,1350.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_ConfigSheets]">
+                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each configuration sheet" sap:VirtualizedContainerService.HintSize="578,1102" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_ConfigSheets]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="x:String">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:String" Name="Sheet" />
                         </ActivityAction.Argument>
-                        <Sequence sap2010:Annotation.AnnotationText="Read settings and constants from the configuration file and add them to the Config dictionary." DisplayName="Get local settings and constants" sap:VirtualizedContainerService.HintSize="544,1160.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence sap2010:Annotation.AnnotationText="Read settings and constants from the configuration file and add them to the Config dictionary." DisplayName="Get local settings and constants" sap:VirtualizedContainerService.HintSize="544,912" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="sd:DataTable" Name="dt_SettingsAndConstants" />
                             <Variable x:TypeArguments="x:String" Name="DatatableString" />
@@ -238,8 +239,6 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:ForEachRow>
-                          <ui:OutputDataTable DataTable="[dt_SettingsAndConstants]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="502,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[DatatableString]" />
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="502,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[DatatableString.ToString]" />
                         </Sequence>
                       </ActivityAction>
                     </ui:ForEach.Body>
@@ -299,10 +298,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="400,228.66666666666666" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="720.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -322,7 +321,7 @@
             </ui:SendOutlookMail>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="720.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
