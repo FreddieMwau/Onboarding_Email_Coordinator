@@ -12,7 +12,11 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_ProcessWorkflowPath&Sequence_25",
+        "str_TechSupportEmail&Sequence_24",
+        "dt_CandidateSummary&StateMachine_1",
+        "dt_print&Sequence_33",
+        "str_TechSupportEmail&Sequence_33",
+        "errorMessage&Sequence_24",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -27,6 +31,7 @@
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
+        "str_ExcelCandidatePath",
         "in_OrchestratorQueueName",
         "in_OrchestratorQueueFolder"
       ],
@@ -172,6 +177,19 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "candidates&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "str_ExcelCandidatePath",
+        "dt_CandidateSummary"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SendEmailWorkflow.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_TechSupportEmail&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "str_ExcelCandidatePath",
