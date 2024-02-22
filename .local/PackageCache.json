@@ -35,6 +35,94 @@
     },
     {
       "Package": {
+        "Id": "UiPath.Mail.Activities",
+        "Version": "1.22.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis\\1.55.0\\lib/netstandard2.0/Google.Apis.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/netstandard2.0/Google.Apis.Core.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/netstandard2.0/HtmlAgilityPack.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\mailkit\\3.1.1\\lib/net6.0/MailKit.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\mimekit\\3.1.1\\lib/net6.0/MimeKit.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.runtime.caching\\6.0.0\\runtimes/win/lib/net6.0/System.Runtime.Caching.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.codedworkflows\\23.10.2\\lib/net6.0-windows7.0/UiPath.CodedWorkflows.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.connectionclient\\1.4.8\\lib/net5.0/ConnectionClient.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Office.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Api.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.platform\\23.10.0\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.telemetry.client\\1.6.69\\lib/netstandard2.0/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.MicrosoftOffice365.Activities",
+        "Version": "2.5.7"
+      },
+      "Assemblies": [
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\closedxml\\0.95.4\\lib/netstandard2.0/ClosedXML.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\documentformat.openxml\\2.12.1\\lib/netstandard2.0/DocumentFormat.OpenXml.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\excelnumberformat\\1.0.10\\lib/netstandard2.0/ExcelNumberFormat.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20231124.2\\lib/net6.0-windows7.0/System.Activities.ViewModels.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.linq.async\\6.0.1\\lib/net6.0/System.Linq.Async.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.linq.async.queryable\\6.0.1\\lib/net6.0/System.Linq.Async.Queryable.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.runtime.caching\\6.0.0\\runtimes/win/lib/net6.0/System.Runtime.Caching.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.connectionclient\\1.4.8\\lib/net5.0/ConnectionClient.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.7\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.Activities.Design.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.7\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.Activities.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.7\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.platform\\23.10.0\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.telemetry.client\\1.6.69\\lib/netstandard2.0/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.7"
+    },
+    {
+      "Package": {
         "Id": "UiPath.System.Activities",
         "Version": "23.12.0-preview"
       },
@@ -66,8 +154,6 @@
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.extensions.options\\3.1.6\\lib/netcoreapp3.1/Microsoft.Extensions.Options.dll",
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.management.infrastructure.cimcmdlets\\7.2.15\\runtimes/win/lib/net6.0/Microsoft.Management.Infrastructure.CimCmdlets.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\2.0.0\\runtimes/win10-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\2.0.0\\runtimes/win10-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.powershell.commands.diagnostics\\7.2.15\\runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Diagnostics.dll",
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.powershell.commands.management\\7.2.15\\runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Management.dll",
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.powershell.commands.utility\\7.2.15\\runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Utility.dll",
@@ -89,7 +175,6 @@
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.data.odbc\\6.0.1\\runtimes/win/lib/net6.0/System.Data.Odbc.dll",
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.data.oledb\\6.0.0\\runtimes/win/lib/net6.0/System.Data.OleDb.dll",
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.directoryservices.accountmanagement\\6.0.0\\runtimes/win/lib/net6.0/System.DirectoryServices.AccountManagement.dll",
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.directoryservices.protocols\\6.0.2\\runtimes/win/lib/net6.0/System.DirectoryServices.Protocols.dll",
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
@@ -191,94 +276,6 @@
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.vision\\3.11.1\\lib/net6.0-windows7.0/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.uiautomation.activities\\23.10.8"
-    },
-    {
-      "Package": {
-        "Id": "UiPath.Mail.Activities",
-        "Version": "1.22.1"
-      },
-      "Assemblies": [
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis\\1.55.0\\lib/netstandard2.0/Google.Apis.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/netstandard2.0/Google.Apis.Core.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/netstandard2.0/HtmlAgilityPack.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\mailkit\\3.1.1\\lib/net6.0/MailKit.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\mimekit\\3.1.1\\lib/net6.0/MimeKit.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/netstandard2.0/BouncyCastle.Crypto.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.runtime.caching\\6.0.0\\runtimes/win/lib/net6.0/System.Runtime.Caching.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.codedworkflows\\23.10.2\\lib/net6.0-windows7.0/UiPath.CodedWorkflows.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.connectionclient\\1.4.8\\lib/net5.0/ConnectionClient.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Office.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Api.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.platform\\23.10.0\\lib/net6.0-windows7.0/UiPath.Platform.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.telemetry.client\\1.6.69\\lib/netstandard2.0/TelemetryClient.dll"
-      ],
-      "Path": "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.mail.activities\\1.22.1"
-    },
-    {
-      "Package": {
-        "Id": "UiPath.MicrosoftOffice365.Activities",
-        "Version": "2.5.7"
-      },
-      "Assemblies": [
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\closedxml\\0.95.4\\lib/netstandard2.0/ClosedXML.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\documentformat.openxml\\2.12.1\\lib/netstandard2.0/DocumentFormat.OpenXml.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\excelnumberformat\\1.0.10\\lib/netstandard2.0/ExcelNumberFormat.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20231124.2\\lib/net6.0-windows7.0/System.Activities.ViewModels.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.linq.async\\6.0.1\\lib/net6.0/System.Linq.Async.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.linq.async.queryable\\6.0.1\\lib/net6.0/System.Linq.Async.Queryable.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.runtime.caching\\6.0.0\\runtimes/win/lib/net6.0/System.Runtime.Caching.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.connectionclient\\1.4.8\\lib/net5.0/ConnectionClient.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.7\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.Activities.Design.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.7\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.Activities.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.7\\lib/net6.0-windows7.0/UiPath.MicrosoftOffice365.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.platform\\23.10.0\\lib/net6.0-windows7.0/UiPath.Platform.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.telemetry.client\\1.6.69\\lib/netstandard2.0/TelemetryClient.dll"
-      ],
-      "Path": "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.7"
     }
   ],
   "Conflicts": [],
@@ -5349,10 +5346,7 @@
         "Id": "Microsoft.Management.Infrastructure.Runtime.Win",
         "Version": "2.0.0"
       },
-      "Assemblies": [
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\2.0.0\\runtimes\\win10-x64\\lib\\netstandard1.6\\Microsoft.Management.Infrastructure.Native.dll",
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\2.0.0\\runtimes\\win10-x64\\lib\\netstandard1.6\\Microsoft.Management.Infrastructure.dll"
-      ],
+      "Assemblies": [],
       "Path": "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\2.0.0"
     },
     {
@@ -6125,24 +6119,6 @@
         "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\runtime.win.system.runtime.extensions\\4.3.0\\runtimes\\win\\lib\\netstandard1.5\\System.Runtime.Extensions.dll"
       ],
       "Path": "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\runtime.win.system.runtime.extensions\\4.3.0"
-    },
-    {
-      "Package": {
-        "Id": "runtime.win7-x64.runtime.native.System.IO.Compression",
-        "Version": "4.3.0"
-      },
-      "Assemblies": [],
-      "Path": "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\runtime.win7-x64.runtime.native.system.io.compression\\4.3.0"
-    },
-    {
-      "Package": {
-        "Id": "runtime.win7.System.Private.Uri",
-        "Version": "4.3.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\runtime.win7.system.private.uri\\4.3.0\\runtimes\\win\\lib\\netstandard1.0\\System.Private.Uri.dll"
-      ],
-      "Path": "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\runtime.win7.system.private.uri\\4.3.0"
     },
     {
       "Package": {

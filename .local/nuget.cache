@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JDg+TG3e99wxT1vZO6KhXtrncD9Xtn6a4XuJdIJ+QjFI+hgKtq+jkz94wtlLzQJK/kE8w8XrMmrz/B/qbFgZfw==",
+  "dgSpecHash": "p5lLS53yojxl6kx4LD62tu0yGvCDvOzxHIf3Y1/jr/ZJUEml4sfJnDcTszYImmtk16hHRUpqIYH/J65kOyW4Pg==",
   "success": true,
   "projectFilePath": "Z:\\UiPath\\HR_Internal\\Onboarding_Email_Coordinator\\.local\\",
   "expectedPackageFiles": [
@@ -141,8 +141,6 @@
     "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\runtime.win.system.net.primitives\\4.3.0\\runtime.win.system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\runtime.win.system.net.sockets\\4.3.0\\runtime.win.system.net.sockets.4.3.0.nupkg.sha512",
     "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\runtime.win.system.runtime.extensions\\4.3.0\\runtime.win.system.runtime.extensions.4.3.0.nupkg.sha512",
-    "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\runtime.win7-x64.runtime.native.system.io.compression\\4.3.0\\runtime.win7-x64.runtime.native.system.io.compression.4.3.0.nupkg.sha512",
-    "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\runtime.win7.system.private.uri\\4.3.0\\runtime.win7.system.private.uri.4.3.0.nupkg.sha512",
     "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\sharpziplib\\1.3.3\\sharpziplib.1.3.3.nupkg.sha512",
     "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20231124.2\\system.activities.viewmodels.1.0.0-20231124.2.nupkg.sha512",
     "C:\\Users\\BrianKiongoNjogu\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
