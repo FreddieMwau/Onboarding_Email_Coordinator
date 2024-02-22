@@ -1,0 +1,8 @@
+# Project folders
+.settings/
+.local/
+.objects/
+.screenshots/
+
+# Project files
+./project.json
