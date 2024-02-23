@@ -52,8 +52,7 @@
       "Path": "Framework/InitAllApplications.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "OutlookAccount&Sequence_17",
-        "RelevantMails&Sequence_17"
+        "Config&Sequence_17"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_Config"
@@ -65,6 +64,8 @@
       "Path": "Emails/GetEmailDetails.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_9",
+        "DatatableString&Sequence_9",
         "str_MailFolder&Sequence_1",
         "str_Sender&Sequence_1",
         "str_FilePath&Sequence_6",
@@ -74,7 +75,9 @@
         "CandidateList&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_config"
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -89,6 +92,28 @@
       "ArgumentsSectionElementsOrder": [
         "in_Folder",
         "io_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Emails/GetEmailDetails(Autosaved).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_Sender&Sequence_1",
+        "str_MailFolder&Sequence_1",
+        "RelevantMails&Sequence_5",
+        "dt_SettingsAndConstants&Sequence_9",
+        "DatatableString&Sequence_9",
+        "DocumentsFolder&Sequence_2",
+        "CandidateList&Sequence_2",
+        "str_FolderPath&Sequence_6",
+        "str_FilePath&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
