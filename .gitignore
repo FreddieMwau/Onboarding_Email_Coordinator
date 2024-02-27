@@ -6,18 +6,18 @@
 ## Ignore .settings folder
 ## Ignore .tmh folder
 
-.local
-.local/*
-/.local
-/.local/*
-.settings
-.settings/*
-/.settings
-/.settings/*
-.objects
-.objects/*
-/.objects
-/.objects/*
+# .local
+# .local/*
+# /.local
+# /.local/*
+# .settings
+# .settings/*
+# /.settings
+# /.settings/*
+# .objects
+# .objects/*
+# /.objects
+# /.objects/*
 .tmh
 .tmh/*
 /.tmh
@@ -35,6 +35,11 @@
  
 # Project files
 ./project.json
+
+# Ignore Compiled files
+*.dll
+*.exe
+*.pdb
  
 ##################################
 ### Using https://gitignore.io ###
