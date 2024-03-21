@@ -1,6 +1,10 @@
 # Ignore Orchestrator specific files (if used)
 # project.json
 *.local/
+*.screenshots/
+*Data/
+!Data\Config.xlsx
+*Exceptions_Screenshots/
 
 # Ignore Logs folder
 Logs/
