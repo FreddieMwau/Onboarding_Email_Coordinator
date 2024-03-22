@@ -164,7 +164,7 @@
         <Sequence sap:VirtualizedContainerService.HintSize="608,1400" sap2010:WorkflowViewState.IdRef="Sequence_20">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -216,11 +216,13 @@
                   <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="RetrievedEmail" />
                 </ActivityAction.Argument>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,784.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,784.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <If sap2010:Annotation.AnnotationText="Executed if the Subject meets the defined filter criteria ." Condition="[RetrievedEmail.Subject.Contains(&quot;New Recruit Candidate Details&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,698.4" sap2010:WorkflowViewState.IdRef="If_3">
                   <If sap2010:Annotation.AnnotationText="Executed if the Subject meets the defined filter criteria ." Condition="[RetrievedEmail.Subject.Contains(&quot;New Recruit Candidate Details&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,698.4" sap2010:WorkflowViewState.IdRef="If_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -259,7 +261,7 @@
         <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="611.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -303,14 +305,20 @@
               </ui:MultipleAssign>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\TakeScreenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="478.4,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_Folder">[str_FolderPath]</InArgument>
-                  <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">[str_FilePath]</InOutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_Folder">
+                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_FolderPath" />
+                  </InArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">
+                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_FilePath" />
+                  </InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[in_Config(&quot;SException_Email_Body&quot;).ToString.Replace(&quot;@error&quot;, exception.Message.ToString).Replace(&quot;@source&quot;, exception.Source.ToString)]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="478.4,188.8" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;SException_Email_Subject&quot;).ToString]" To="[in_Config(&quot;str_TechSupportEmail&quot;).ToString]">
                 <ui:SendOutlookMail.Files>
                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                    <InArgument x:TypeArguments="x:String">[str_FilePath]</InArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_FilePath" />
+                    </InArgument>
                   </scg:List>
                 </ui:SendOutlookMail.Files>
               </ui:SendOutlookMail>
