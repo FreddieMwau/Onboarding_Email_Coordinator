@@ -4,6 +4,7 @@
   "description": "This automation works with on boarding new resources",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Database.Activities": "[1.8.2-preview]",
     "UiPath.Excel.Activities": "[2.23.0-preview]",
     "UiPath.Mail.Activities": "[1.22.1]",
     "UiPath.MicrosoftOffice365.Activities": "2.5.7",
@@ -45,13 +46,6 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "3cae6a3d-9f37-44e0-90a5-b85bb195910f",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\GetTransactionDataTestCase.xaml"
-      },
       {
         "editingStatus": "InProgress",
         "testCaseId": "1b3f7ad8-ec44-428d-a350-70756f8962c1",
