@@ -2,12 +2,12 @@
   <x:Members>
     <x:Property Name="in_dt_CandidateSummary" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
-    <x:Property Name="in_startTime" Type="InArgument(s:DateTime)" />
+    <x:Property Name="in_startTime" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794.4,2308</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>954.4,2308</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Queue_and_DB_Population_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -215,7 +215,7 @@
                       </scg:List>
                     </ui:MultipleAssign.AssignOperations>
                   </ui:MultipleAssign>
-                  <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[int_affectedRowsCount]" DisplayName="Run Command to populate the Database" ExistingDbConnection="[db_Connection]" sap:VirtualizedContainerService.HintSize="478.4,155.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" Sql="[&quot;USE [RPA_Reporter]&#xD;&#xA;INSERT INTO [dbo].[OnboardingCandidateTable] (&#xD;&#xA;&#x9;[FullName], &#xD;&#xA;&#x9;[Email], &#xD;&#xA;&#x9;[JobTitle], &#xD;&#xA;&#x9;[CandidateStatus], &#xD;&#xA;&#x9;[AcceptanceDeadline], &#xD;&#xA;&#x9;[StartDate],&#x9;[Address], &#xD;&#xA;&#x9;[BotName])    &#xD;&#xA;&#x9;&#xD;&#xA;VALUES('&quot;+CurrentRow.item(&quot;First Name&quot;).ToString+ &quot; &quot;+ CurrentRow.item(&quot;Last Name&quot;).ToString+&quot;', &#xD;&#xA;&#x9;&#x9;&#x9;  '&quot;+CurrentRow.item(&quot;Email&quot;).ToString+&quot;', &#xD;&#xA;&#x9;&#x9;&#x9;  '&quot;+CurrentRow.item(&quot;Job Title&quot;).ToString+&quot;', &#xD;&#xA;&#x9;&#x9;&#x9;  '&quot;+CurrentRow.item(&quot;Candidate Status&quot;).ToString+&quot;', &#xD;&#xA;&#x9;&#x9;&#x9;  '&quot;+acceptanceDeadline+&quot;', &#xD;&#xA;&#x9;&#x9;&#x9;  '&quot;+startDate+&quot;', &#xD;&#xA;&#x9;&#x9;&#x9;  '&quot;+CurrentRow.item(&quot;Address&quot;).ToString+&quot;', &#xD;&#xA;&#x9;&#x9;&#x9;  'Dispatcher')&quot;]">
+                  <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[int_affectedRowsCount]" DisplayName="Run Command to populate the Database" ExistingDbConnection="[db_Connection]" sap:VirtualizedContainerService.HintSize="478.4,155.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" Sql="[&quot;USE [RPA_Reporter]&#xA;INSERT INTO [dbo].[OnboardingCandidateTable] (&#xA;&#x9;[FullName], &#xA;&#x9;[Email], &#xA;&#x9;[JobTitle], &#xA;&#x9;[CandidateStatus], &#xA;&#x9;[AcceptanceDeadline], &#xA;&#x9;[StartDate],&#xA;&#x9;[Address], &#xA;&#x9;[BotName],&#xA;&#x9;[StartTime])    &#xA;&#x9;&#xA;VALUES('&quot;+CurrentRow.item(&quot;First Name&quot;).ToString+ &quot; &quot;+ CurrentRow.item(&quot;Last Name&quot;).ToString+&quot;', &#xA;&#x9;&#x9;&#x9;  '&quot;+CurrentRow.item(&quot;Email&quot;).ToString+&quot;', &#xA;&#x9;&#x9;&#x9;  '&quot;+CurrentRow.item(&quot;Job Title&quot;).ToString+&quot;', &#xA;&#x9;&#x9;&#x9;  '&quot;+CurrentRow.item(&quot;Candidate Status&quot;).ToString+&quot;', &#xA;&#x9;&#x9;&#x9;  '&quot;+acceptanceDeadline+&quot;', &#xA;&#x9;&#x9;&#x9;  '&quot;+startDate+&quot;', &#xA;&#x9;&#x9;&#x9;  '&quot;+CurrentRow.item(&quot;Address&quot;).ToString+&quot;',&#xA;&#x9;&#x9;&#x9;  'Dispatcher',&#xA;&#x9;&#x9;&#x9;  '&quot;+in_startTime+&quot;')&quot;]">
                     <ui:ExecuteNonQuery.Parameters>
                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                     </ui:ExecuteNonQuery.Parameters>
@@ -272,24 +272,33 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="416,578.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence sap:VirtualizedContainerService.HintSize="496,695.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <Sequence.Variables>
                 <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_Connection" />
                 <Variable x:TypeArguments="x:Int32" Name="int_affectedRowCount" />
+                <Variable x:TypeArguments="x:String" Name="str_DateTimeNow" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="353.6,100" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="Microsoft.Data.SqlClient" ConnectionString="Data Source=&quot;localhost, 1443&quot;;Persist Security Info=True;User ID=sa;Password=YourStrong!Passw0rd;Encrypt=False" DatabaseConnection="[db_Connection]" />
-              <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[int_affectedRowCount]" DisplayName="Run Command" ExistingDbConnection="[db_Connection]" sap:VirtualizedContainerService.HintSize="353.6,155.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_3" Sql="[&quot;USE [RPA_Reporter]&#xD;&#xA;INSERT INTO Exceptions (&#xD;&#xA;    [BotName],&#xD;&#xA;    [ExceptionType],&#xD;&#xA;    [Source],&#xD;&#xA;    [Message],&#xD;&#xA;    [StartTime],&#xD;&#xA;    [EndTime])&#xD;&#xA; &#xD;&#xA; VALUES(&#x9;'Dispatcher',&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;'System exception',&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;'&quot;+exception.Source+&quot;',&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;'&quot;+exception.Message+&quot;',&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;'&quot;+in_startTime.ToString+&quot;',&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;GETDATE()&#xD;&#xA;)&quot;]">
+              <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="433.6,100" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="Microsoft.Data.SqlClient" ConnectionString="Data Source=&quot;localhost, 1443&quot;;Persist Security Info=True;User ID=sa;Password=YourStrong!Passw0rd;Encrypt=False" DatabaseConnection="[db_Connection]" />
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[str_DateTimeNow]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[int_affectedRowCount]" DisplayName="Run Command" ExistingDbConnection="[db_Connection]" sap:VirtualizedContainerService.HintSize="433.6,155.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_3" Sql="[&quot;USE [RPA_Reporter]&#xA;INSERT INTO Exceptions (&#xA;    [BotName],&#xA;    [ExceptionType],&#xA;    [Source],&#xA;    [Message],&#xA;    [StartTime],&#xA;    [EndTime])&#xA; &#xA; VALUES(&#x9;'Dispatcher',&#xA;&#x9;&#x9;&#x9;&#x9;'System exception',&#xA;&#x9;&#x9;&#x9;&#x9;'&quot;+exception.Source+&quot;',&#xA;&#x9;&#x9;&#x9;&#x9;'&quot;+exception.Message+&quot;',&#xA;&#x9;&#x9;&#x9;&#x9;'&quot;+in_startTime.ToString+&quot;',&#xA;&#x9;&#x9;&#x9; &#x9;'&quot;+str_DateTimeNow+&quot;'&#xA;)&quot;]">
                 <ui:ExecuteNonQuery.Parameters>
                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                 </ui:ExecuteNonQuery.Parameters>
               </ui:ExecuteNonQuery>
-              <ui:DatabaseDisconnect DatabaseConnection="[db_Connection]" DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="353.6,64.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
-              <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[in_Config(&quot;SException_Email_Body&quot;).ToString.Replace(&quot;@source&quot;,exception.Source).Replace(&quot;@error&quot;,exception.Message).Replace(&quot;@int_affectedRowsCount&quot;, int_affectedRowCount.ToString)]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="353.6,172" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;SException_Email_Subject&quot;).ToString]" To="[in_Config(&quot;str_TechSupportEmail&quot;).ToString]">
+              <ui:DatabaseDisconnect DatabaseConnection="[db_Connection]" DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="433.6,64.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+              <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[in_Config(&quot;SException_Email_Body&quot;).ToString.Replace(&quot;@source&quot;,exception.Source).Replace(&quot;@error&quot;,exception.Message).Replace(&quot;@int_affectedRowCount&quot;, int_affectedRowCount.ToString)]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="433.6,172" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;SException_Email_Subject&quot;).ToString]" To="[in_Config(&quot;str_TechSupportEmail&quot;).ToString]">
                 <ui:SendOutlookMail.Files>
                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                 </ui:SendOutlookMail.Files>
