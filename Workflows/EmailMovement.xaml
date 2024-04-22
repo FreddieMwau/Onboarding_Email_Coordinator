@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>954.4,1852</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1329.6,891.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EmailMovement_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -140,7 +140,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This sequence implements the email movement functionality by checking for the top email in the inbox. If read, the email is moved to the On boarding processed mail folder." DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="707.2,1787.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence implements the email movement functionality by checking for the top email in the inbox. If read, the email is moved to the On boarding processed mail folder." DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="515.2,468" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="ProcessedMails" />
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="MailList" />
@@ -153,7 +153,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="644.8,1654.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452.8,335.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -161,53 +161,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="608,1400" sap2010:WorkflowViewState.IdRef="Sequence_20">
+        <Sequence sap:VirtualizedContainerService.HintSize="608,1124.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="545.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[in_Config(&quot;originFolder&quot;).ToString]" />
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="545.6,92.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-            <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="540.8,257.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,171.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
-                  <ui:MultipleAssign.AssignOperations>
-                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:String">[RobotAccountEmail]</OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">[in_Config("RobotAccountEmail").ToString]</InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:String">[originFolder]</OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">[in_Config("originFolder").ToString]</InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                    </scg:List>
-                  </ui:MultipleAssign.AssignOperations>
-                </ui:MultipleAssign>
-              </Sequence>
-            </ui:CommentOut.Body>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:CommentOut>
           <ui:GetOutlookMailMessages Account="{x:Null}" Filter="{x:Null}" FilterByMessageIds="{x:Null}" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="545.6,64.8" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_4" MailFolder="[in_Config(&quot;originFolder&quot;).ToString]" MarkAsRead="False" Messages="[MailList]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" TimeoutMS="20000" Top="10" />
           <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each: mail in the inbox" sap:VirtualizedContainerService.HintSize="545.6,973.6" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[MailList]">
             <ui:ForEach.Body>
@@ -216,13 +176,11 @@
                   <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="RetrievedEmail" />
                 </ActivityAction.Argument>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,784.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,784.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If sap2010:Annotation.AnnotationText="Executed if the Subject meets the defined filter criteria ." Condition="[RetrievedEmail.Subject.Contains(&quot;New Recruit Candidate Details&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,698.4" sap2010:WorkflowViewState.IdRef="If_3">
                   <If sap2010:Annotation.AnnotationText="Executed if the Subject meets the defined filter criteria ." Condition="[RetrievedEmail.Subject.Contains(&quot;New Recruit Candidate Details&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,698.4" sap2010:WorkflowViewState.IdRef="If_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -258,10 +216,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="611.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="419.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -305,20 +263,14 @@
               </ui:MultipleAssign>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\TakeScreenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="478.4,153.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_Folder">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_FolderPath" />
-                  </InArgument>
-                  <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">
-                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_FilePath" />
-                  </InOutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_Folder">[str_FolderPath]</InArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">[str_FilePath]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[in_Config(&quot;SException_Email_Body&quot;).ToString.Replace(&quot;@error&quot;, exception.Message.ToString).Replace(&quot;@source&quot;, exception.Source.ToString)]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="478.4,188.8" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;SException_Email_Subject&quot;).ToString]" To="[in_Config(&quot;str_TechSupportEmail&quot;).ToString]">
                 <ui:SendOutlookMail.Files>
                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                    <InArgument x:TypeArguments="x:String">
-                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_FilePath" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String">[str_FilePath]</InArgument>
                   </scg:List>
                 </ui:SendOutlookMail.Files>
               </ui:SendOutlookMail>
